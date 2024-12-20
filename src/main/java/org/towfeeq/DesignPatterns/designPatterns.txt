@@ -1,0 +1,140 @@
+Code Comparison between factory pattern and abstract factory pattern
+====================================================================
+
+Factory Pattern Example:
+
+    // Product Interface
+    interface Shape {
+        void draw();
+    }
+
+    // Concrete Products
+    class Circle implements Shape {
+        public void draw() {
+            System.out.println("Drawing a Circle");
+        }
+    }
+
+    class Square implements Shape {
+        public void draw() {
+            System.out.println("Drawing a Square");
+        }
+    }
+
+    // Factory
+    class ShapeFactory {
+        public Shape createShape(String type) {
+            if (type.equals("Circle")) return new Circle();
+            if (type.equals("Square")) return new Square();
+            return null;
+        }
+    }
+
+    // Client
+    public class FactoryPatternExample {
+        public static void main(String[] args) {
+            ShapeFactory factory = new ShapeFactory();
+            Shape circle = factory.createShape("Circle");
+            circle.draw();
+
+            Shape square = factory.createShape("Square");
+            square.draw();
+        }
+    }
+
+------
+
+Abstract Factory Pattern Example:
+
+    // Abstract Products
+    interface Button {
+        void render();
+    }
+
+    interface Checkbox {
+        void render();
+    }
+
+    // Concrete Products for Windows
+    class WindowsButton implements Button {
+        public void render() {
+            System.out.println("Rendering Windows Button");
+        }
+    }
+
+    class WindowsCheckbox implements Checkbox {
+        public void render() {
+            System.out.println("Rendering Windows Checkbox");
+        }
+    }
+
+    // Concrete Products for Mac
+    class MacButton implements Button {
+        public void render() {
+            System.out.println("Rendering Mac Button");
+        }
+    }
+
+    class MacCheckbox implements Checkbox {
+        public void render() {
+            System.out.println("Rendering Mac Checkbox");
+        }
+    }
+
+    // Abstract Factory
+    interface GUIFactory {
+        Button createButton();
+        Checkbox createCheckbox();
+    }
+
+    // Concrete Factories
+    class WindowsFactory implements GUIFactory {
+        public Button createButton() {
+            return new WindowsButton();
+        }
+
+        public Checkbox createCheckbox() {
+            return new WindowsCheckbox();
+        }
+    }
+
+    class MacFactory implements GUIFactory {
+        public Button createButton() {
+            return new MacButton();
+        }
+
+        public Checkbox createCheckbox() {
+            return new MacCheckbox();
+        }
+    }
+
+    // Client
+    public class AbstractFactoryPatternExample {
+        public static void main(String[] args) {
+            GUIFactory windowsFactory = new WindowsFactory();
+            Button winButton = windowsFactory.createButton();
+            Checkbox winCheckbox = windowsFactory.createCheckbox();
+            winButton.render();
+            winCheckbox.render();
+
+            GUIFactory macFactory = new MacFactory();
+            Button macButton = macFactory.createButton();
+            Checkbox macCheckbox = macFactory.createCheckbox();
+            macButton.render();
+            macCheckbox.render();
+        }
+    }
+
+
+--------
+
+ Summary
+ => Factory Pattern: Focuses on creating a single product type with variations.
+ => Abstract Factory Pattern: Focuses on creating families of related products, ensuring compatibility.
+
+ Use the Factory Pattern when you need a single type of product with variations and the Abstract Factory
+ Pattern when you need families of related products to work together seamlessly.
+
+
+
+================================================================================

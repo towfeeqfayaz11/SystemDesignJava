@@ -1,0 +1,61 @@
+The Factory Design Pattern is a creational design pattern that provides a way to delegate object creation
+to a factory class. Instead of creating objects directly using the new keyword, the client calls a factory
+method, which determines which class to instantiate.
+
+The pattern centralizes object creation logic into a single factory class or method, making the client
+code more flexible and easier to maintain.
+
+Components of the Factory Pattern:
+- Product:
+    The common interface or base class for the objects created by the factory.
+- Concrete Products:
+    The specific classes that implement the Product interface or inherit from the base class.
+- Creator (Factory):
+    Contains the factory method that returns objects.
+
+
+Use cases for "factory design pattern":
+  - object creation based on type:
+    => assume case to create object for baremetal server handling vs vitualmachine server handling
+  - database connection factory
+    => Choosing between MySQL, PostgreSQL, etc., at runtime.
+  - Notification System
+    => Sending email, SMS, or push notifications based on user preferences.
+  - Parser Factory
+    => Returning appropriate parsers (XML, JSON, CSV) based on file format.
+
+
+Using a Factory Pattern, we move object creation logic to a separate Factory class, making the
+client code independent of concrete implementations.
+
+
+
+
+Why Use Factory Pattern?
+    Decoupling: Avoid hardcoding object creation in the client code.
+    Flexibility: Enables easy addition of new types without changing existing code.
+    Centralized Object Creation: Maintains control over how objects are created.
+
+Advantages:
+    Loose Coupling: The client code relies only on the Factory, not concrete implementations.
+    Extensibility: Adding new shapes (e.g., Triangle) only requires modifying the Factory.
+    Centralized Logic: Object creation logic is centralized in the Factory class.
+
+
+Multithreaded Factory (Optional):
+    If your application is multithreaded, ensure the Factory method is thread-safe using
+    synchronized blocks or concurrent data structures.
+
+
+The factory pattern helps centralize the creation logic and delegates the responsibility of
+creating objects to factory classes, which decide the specific class to instantiate.
+This allows the code to adhere to the "Open Close Principle(OCP)" by letting new types of Shape be
+added without modifying the existing code
+
+
+
+
+
+
+
+

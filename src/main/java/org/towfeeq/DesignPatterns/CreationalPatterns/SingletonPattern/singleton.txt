@@ -1,0 +1,61 @@
+Singleton pattern is used when exactly "one instance" of a class is required to coordinate actions across the system
+
+In certain situations, such as managing database connection, logging, or configuration settings,
+you want to ensure that only one instance of a class is created through the application's lifecycle.
+If multiple instances of a class were created, it could lead to issues like;
+- inconsistent state: if multiple instances represent the same concept, they may hold different data
+- resource conflict: if multiple instances of a resource-heavy class are created, it can load to
+  performance degradation
+
+
+Singleton Pattern:
+    => ensures only one instance of a class is created and provides a global
+       point of access to the object
+
+
+Use cases for "singleton design pattern":
+  - database connection pool:
+    => ensure there is a single connection pool for managing database connections
+
+  - logging:
+    => ensure there is a single logger instance for logging messages
+
+  - configuration management:
+    => Applications often require access to configuration settings, that need to be shared.
+       It ensures, configuration is loaded once and used throughout the app
+       e.g; API keys, environment variables
+
+  - Thread Pools:
+    => Reusing threads efficiently in multi-threaded applications.
+    => A Singleton can manage a thread pool so that the same pool is used for task execution,
+       ensuring optimal resource utilization
+
+  - caching:
+    => To store frequently accessed data in memory, a Singleton can be used to manage the cache,
+       avoiding repeated database calls or redundant computations
+       e.g; Redis cache clients are often implemented using a Singleton
+
+
+Benefits:
+- Ensures consistent state by maintaining a single source of truth for the class.
+- Avoids resource conflicts by reducing unnecessary instance creation.
+
+Limitations:
+- Singleton introduces global state, which can make unit testing more complex due
+  to hidden dependencies.
+- Overuse can lead to violation of the Single Responsibility Principle (SRP), as
+  the Singleton might manage its instance logic alongside other tasks.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
