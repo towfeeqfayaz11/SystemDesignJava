@@ -1,0 +1,40 @@
+=> The Builder Design Pattern is a creational design pattern used to construct complex objects step by step.
+   Unlike other creational patterns, it allows more control over the construction process and makes it
+   possible to create different representations of the same object.
+
+
+Key Features:
+    - Step-by-step Construction: Allows incremental construction of complex objects.
+    - Fluent Interface: Often implemented using a fluent API for better readability and chaining of method calls.
+    - Separation of Construction and Representation: The pattern separates the creation logic from the object itself.
+
+Use Cases;
+Building Configurations:
+    - Example: Creating a configuration object for a server with multiple optional settings.
+
+Creating Immutable Objects:
+    - Example: Constructing an HTTP request with various headers and query parameters.
+
+Game Development:
+    - Example: Constructing a game character with optional abilities or weapons.
+
+Reports/Forms:
+    - Example: Generating dynamic reports or forms with optional sections.
+
+UI Components:
+    - Example: Building a complex UI element like a dialog box with multiple optional widgets (buttons, checkboxes).
+
+
+
+Problem Without Builder Pattern:
+    - constructor explosion:  too many constructors
+    - difficult to understand and maintain code
+    - When creating objects with multiple fields, especially optional ones, constructors can become unwieldy
+      or confusing. This is known as the "Telescoping Constructor Problem".
+
+
+Problem: when a class constructor has too many parameters, the Builder Pattern allows step-by-step construction
+         of complex objects
+
+Solution: Seperates the construction of an object from its representation, offering a fluent interface fro creating
+          complex objects
