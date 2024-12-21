@@ -137,4 +137,7 @@ Abstract Factory Pattern Example:
 
 
 
+NOTE: factory design pattern creates objects of concrete classes, while abstract factory pattern
+      creates factories that is going to create objects (thus abstract factory pattern is going
+      to create a family of classes)
 ================================================================================

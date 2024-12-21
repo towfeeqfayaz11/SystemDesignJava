@@ -1,0 +1,59 @@
+It is also called factory of factories
+
+Abstract factory is used to group different concrete factories together using another level of
+abstraction on top concrete factories
+
+The Abstract Factory Pattern is a creational design pattern that provides an interface to
+create families of related or dependent objects without specifying their concrete classes.
+
+Usecases of abstract factory pattern:
+- The theme (Light or Dark) defines the entire UI’s look and feel.
+  All components (buttons, text fields, etc.) must match the theme.
+- Abstract Factory Output: A family of objects like DarkButton,
+  DarkTextField, LightButton, LightTextField.
+
+Why Use Abstract Factory Pattern?
+    Family of Related Objects: Ensures that the objects created are compatible with each other.
+    Decoupling: Decouples the client code from specific classes.
+    Extensibility: Makes it easy to add new product families without changing the existing code.
+
+How It Works:
+    - The Abstract Factory Interface (GUIFactory) defines methods to create related objects (Button and Checkbox).
+    - Concrete Factories (WindowsFactory, MacFactory) implement the interface to produce platform-specific objects.
+    - The Client Code (WithAbstractFactoryPattern) uses the Factory to create objects without depending on their
+      concrete implementations.
+
+
+Benefits of Abstract Factory Pattern
+    - Loose Coupling: The client code is decoupled from concrete classes.
+    - Extensibility: Adding a new family (e.g., Linux) requires only adding
+      a new Factory and corresponding products.
+    - Consistency: Ensures that related objects are compatible with each other.
+    - Centralized Control: Encapsulates object creation logic in one place.
+
+
+
+NOTE: If you are familiar with factory design pattern in java, you will notice that we have
+      a single Factory class. This factory class returns different subclasses based on the
+      input provided and factory class uses if-else or switch statement to achieve this.
+      In the Abstract Factory pattern, we get rid of if-else block and have a factory class
+      for each sub-class. Then an Abstract Factory class that will return the sub-class
+      based on the input factory class.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
