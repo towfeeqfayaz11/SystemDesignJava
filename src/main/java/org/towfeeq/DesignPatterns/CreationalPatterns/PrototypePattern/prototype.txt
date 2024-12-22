@@ -1,0 +1,46 @@
+The Prototype Pattern is a creational design pattern that allows you to create new objects by copying
+an existing object, known as the prototype, rather than creating a new instance from scratch. This
+pattern is particularly useful when the creation process of an object is complex or costly, and you
+want to reuse an existing object as a template for new instances.
+
+
+Core Concept of Prototype Pattern:
+    Instead of creating new objects directly through a constructor, the Prototype Pattern involves:
+        - Cloning an existing object.
+        - The cloned object may be deep or shallow copied depending on the requirements.
+
+    The main idea is that instead of constructing a new instance from scratch, you simply clone an
+    existing one, which saves time and resources, especially when the object construction is expensive or repetitive.
+
+
+Steps to Implement Prototype Pattern:
+    - Define a Prototype Interface: The interface usually includes a clone() method, which will be used to clone the prototype object.
+    - Concrete Prototype: Concrete classes implement the Prototype interface, providing their own version of the clone() method.
+      The clone() method typically performs the actual object copying.
+    - Client Code: The client code can call the clone() method on an existing object to create a new object that is a copy of the original.
+
+
+Key Features of Prototype Pattern:
+    - Cloning: Instead of creating new instances, you clone an existing instance.
+    - Avoids Subclassing: You don't need to create separate subclasses for similar objects; cloning takes care of object creation.
+    - Efficient Object Creation: Reduces the cost of creating new objects, especially if the initialization process is expensive.
+
+Use Cases for Prototype Pattern:
+    - Object Copying: When objects are complex or expensive to create, and their configuration or state can be reused.
+      Example: Copying an object with many attributes like graphics objects in game development.
+
+    - Prototype Registry: Managing a pool of prototype objects that can be cloned as needed.
+      Example: In frameworks or libraries where predefined instances are cloned (e.g., GUI components).
+
+    - Avoiding Expensive Operations: When object initialization involves expensive operations like
+      database access or network communication.
+      Example: Cloning preloaded configurations.
+
+Benefits:
+    - Reduces Cost: Avoids expensive initialization for each object.
+    - Dynamic Object Creation: Enables flexibility in object creation during runtime.
+    - Decouples Code: Removes dependencies on specific classes during object creation.
+Limitations:
+    - Shallow vs. Deep Copy Issues: Care must be taken to ensure proper cloning, especially with complex
+      objects containing nested structures.
+    - Prototype Maintenance: Managing and updating prototype objects can become tricky.
