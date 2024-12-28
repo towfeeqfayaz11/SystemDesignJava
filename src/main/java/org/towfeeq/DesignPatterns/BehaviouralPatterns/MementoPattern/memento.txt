@@ -1,0 +1,65 @@
+Memento Design Pattern
+The Memento Pattern is used to capture and restore an object's internal state without exposing
+the internal details of the object. It’s like creating a snapshot of an object’s state at a
+certain point in time, so you can roll back to that state if needed.
+
+NOTE: memento means an object kept as a reminder of a person or event.
+
+
+Key Concepts
+    Originator: The object whose state you want to save and restore.
+    Memento: A snapshot of the state, encapsulated and stored without revealing the internal
+             structure of the originator.
+    Caretaker: Manages the memento(s) and decides when to save or restore the state.
+
+Use Cases for Memento Pattern
+    Undo/Redo Functionality:
+        Applications like text editors use memento to save states, allowing users to revert changes.
+        E.g., A word processor remembers the document state before each edit.
+
+    Game State Saving:
+        Games often allow players to save progress and reload it later.
+        E.g., Save checkpoints in a game level.
+
+    State Recovery in Transactions:
+        Database systems or transactional systems can rollback to a previous state using memento.
+        E.g., Banking systems ensuring consistency during transactions.
+
+    Debugging:
+        Save and restore object states during debugging to recreate scenarios for testing.
+
+Benefits
+    Encapsulation: Keeps the internal state of the originator safe, preventing external accessor
+                   modification.
+    Flexibility: Easy rollback to a previous state.
+    Ease of Implementation: Simple, with clearly defined roles.
+
+Limitations
+    Memory Usage: Storing multiple states can consume significant memory.
+    Complexity: Caretakers must manage mementos properly to avoid unintended behavior.
+
+
+Key Takeaways
+- The Memento Pattern is ideal for scenarios where you need to maintain snapshots of an object’s state.
+- The Originator creates and restores snapshots, the Memento stores the state, and the Caretaker manages the mementos.
+- Provides a clean separation of concerns, making the code easier to maintain and extend.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

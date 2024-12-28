@@ -42,7 +42,7 @@ NOTE:
     - shallow copy here create a new object but does not clone the objects that
       the original object refers to (only the outer object is copied)
     - deep copy clones the original object and all the objects it refers to (nested objects
-      
+
 */
 
 

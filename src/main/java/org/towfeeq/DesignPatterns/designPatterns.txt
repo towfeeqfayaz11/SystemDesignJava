@@ -1,3 +1,18 @@
+github reference: https://github.com/prateek27/design-patterns-java/tree/main (prateek)
+# Design pattern in general is a reusable solution to a common problem
+
+# three types of design patterns:
+1) behavioural pattern:
+    - focus on how objects communicate and interact, managing the flow information
+      between entities(objects)
+    - they simplify complex control flow by defining clear communication and behaviour
+      among objects
+    - they provide solutions for managing object relationships and communication protocols
+      to promote loose coupling and enhance flexibility
+2) creational pattern
+3) structural pattern
+
+
 Code Comparison between factory pattern and abstract factory pattern
 ====================================================================
 
