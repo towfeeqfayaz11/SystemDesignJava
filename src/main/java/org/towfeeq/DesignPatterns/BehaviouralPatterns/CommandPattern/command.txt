@@ -1,0 +1,31 @@
+Command Design Pattern
+    The Command Pattern is a behavioral design pattern that encapsulates a request as an object,
+    thereby allowing users to parameterize clients with queues, requests, and operations, as well
+    as support undoable operations.
+
+Key Concepts
+1) Encapsulation of Requests: A request is wrapped in an object to provide decoupling between the sender and the receiver.
+2) Client-Invoker-Receiver Relationship:
+    - Client: Creates commands and sets them in the invoker.
+    - Invoker: Executes commands.
+    - Receiver: Performs the actual work.
+3) Undo/Redo Functionality: The pattern easily supports undoable operations by maintaining a history of commands.
+4) Decoupling: The client (sender) and the receiver are not directly connected; instead, the invoker interacts
+               with commands to execute actions.
+Use Cases
+    Undo/Redo Functionality:
+        Text editors or image manipulation tools.
+    Macro Recording:
+        Game development to replay sequences of actions.
+    Queue Processing:
+        Background tasks or job schedulers.
+    Button Actions in GUI Applications:
+        Each button click triggers a specific command.
+
+Benefits
+    Flexibility: Commands can be stored, executed later, or even replaced dynamically.
+    Decoupling: The sender and receiver are decoupled, promoting loose coupling.
+    Extensibility: New commands can be added without changing the existing system.
+Limitations
+    Complexity: The additional command classes can increase complexity in simple scenarios.
+    Overhead: For very basic operations, creating command objects may seem excessive.
