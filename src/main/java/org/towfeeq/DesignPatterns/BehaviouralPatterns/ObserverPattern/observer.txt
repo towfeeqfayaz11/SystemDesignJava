@@ -1,0 +1,39 @@
+Observer Design Pattern
+    The Observer Pattern defines a one-to-many dependency between objects so that when one object
+    (the Subject) changes its state, all its dependent objects (the Observers) are notified and updated automatically.
+
+Key Concepts
+    Subject: The object that maintains a list of dependents (observers) and notifies them of changes.
+    Observer: The objects that watch the subject for changes and respond to updates.
+    Decoupling: Observers and subjects are loosely coupled, meaning changes in the subject's implementation
+                do not directly affect the observers.
+
+Use Cases for Observer Pattern
+    Event Listeners:
+        GUI frameworks like Java's Swing use the observer pattern to handle user interactions (e.g., button click listeners).
+        E.g., A button notifies its listeners when clicked.
+
+    Real-Time Notifications:
+        Used in applications like stock trading, messaging apps, or weather apps where updates need to be pushed to subscribers.
+        E.g., A stock price tracker notifies all subscribers when a stock price changes., social media
+
+    Publish-Subscribe Mechanisms:
+        Used in distributed systems to decouple publishers and subscribers.
+        News articles are published (subject) and subscribers (users) are notified whenever a new article is published
+        E.g., Redis Pub/Sub, Kafka.
+
+    Model-View-Controller (MVC):
+        The View observes changes in the Model and updates itself accordingly.
+        E.g., A spreadsheet updates when underlying data changes.
+
+    Logging Systems:
+        Different logging handlers can observe events and log them as needed, such as to the console, file or remote server
+
+Benefits
+    Loose Coupling: Observers and subjects are independent, allowing for better scalability and reusability.
+    Flexibility: You can add or remove observers dynamically without modifying the subject.
+
+Limitations
+    Memory Leaks: Observers not properly removed can lead to memory leaks in certain programming languages.
+    Cascade of Updates: A single state change in the subject may trigger a chain reaction of updates,
+                        leading to performance issues.
