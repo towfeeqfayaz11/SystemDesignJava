@@ -1,0 +1,30 @@
+Strategy Design Pattern
+    The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable.
+    This allows the algorithm to vary independently from the clients that use it.
+
+Key Concepts
+    Encapsulation of Algorithms: Each algorithm (or strategy) is encapsulated in its own class.
+    Interchangeability: You can switch algorithms dynamically at runtime without modifying the client code.
+    Context Class: The client interacts with a Context class, which uses a chosen strategy.
+
+Use Cases for Strategy Pattern
+Payment Systems:
+    Choosing between different payment methods like credit card, PayPal, or cryptocurrency.
+
+Sorting Algorithms:
+    Dynamically selecting a sorting algorithm like quicksort, mergesort, or bubblesort based on the dataset.
+
+File Compression:
+    Switching between ZIP, RAR, or GZIP compression techniques.
+
+Game Development:
+    Implementing different behaviors for characters (e.g., aggressive, defensive, passive).
+
+Benefits
+    Open-Closed Principle: Adding new strategies doesn’t modify existing client code.
+    Separation of Concerns: The algorithm's implementation is independent of the client code.
+    Runtime Flexibility: You can change strategies dynamically during program execution.
+
+Limitations
+    Complexity: Introducing multiple strategy classes can increase code complexity.
+    Overhead: If strategies are simple, using this pattern may add unnecessary overhead.
