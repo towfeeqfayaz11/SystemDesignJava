@@ -1,0 +1,47 @@
+The Template Method Pattern defines the skeleton of an algorithm in a superclass but
+lets subclasses override specific steps of the algorithm without changing its structure.
+It allows you to enforce a general workflow while allowing flexibility in certain parts
+of the process.It ensures consistency across implementations and reusability of common logic.
+
+Key Concepts:
+    Template Method:
+        - The overall structure of the algorithm is defined in a method called the template method
+          in the base class.
+    Abstract Methods:
+        - Subclasses implement these methods to provide specific behavior for steps in the algorithm.
+    Concrete Methods:
+        - Common steps of the algorithm are implemented in the base class.
+    Hook Methods:
+        - Optional methods that subclasses can override to modify behavior without being forced
+          to implement.
+
+
+Use Cases
+    Workflow Management:
+        - Define a general workflow, such as document generation (prepare, format, export),
+          where specific formats can vary (e.g., PDF, Word).
+    Game Development:
+        - Define the general flow of a game (initialize, start, play, end), with specific
+          behaviors like player input or graphics rendered being handled by subclasses.
+    Report Generation:
+        - Create a skeleton for generating reports (data retrieval, formatting, export),
+          with different data sources or formats defined in subclasses.
+    Cooking Recipes:
+        - A recipe could have a standard workflow (prepare ingredients, cook, serve) but
+          allow customization for the type of dish.
+
+Benefits
+    Code Reusability:
+        - Common workflow logic is in the superclass, reducing duplication.
+    Enforces a Standard:
+        - Guarantees a consistent structure for subclasses to follow.
+    Flexibility:
+        - Allows specific parts of the workflow to be modified without changing the overall process.
+
+
+Limitations
+    Inflexibility for Major Changes:
+        - If the algorithm’s structure needs drastic changes, modifying the base class might
+          affect all subclasses.
+    Tight Coupling:
+        - Subclasses are tightly coupled to the superclass.

@@ -21,6 +21,8 @@ Use Cases
         Background tasks or job schedulers.
     Button Actions in GUI Applications:
         Each button click triggers a specific command.
+    Batch Processing:
+        can be used in batch processing cases
 
 Benefits
     Flexibility: Commands can be stored, executed later, or even replaced dynamically.
