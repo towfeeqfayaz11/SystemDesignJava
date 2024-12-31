@@ -12,7 +12,7 @@ private void openReport() and private void closeReport():
 
     - Purpose: These methods implement common behavior that is not intended to be modified or
       accessed by subclasses.
-    - private: Restricts access to the Report class itself, as these are internal details
+    - private: Restricts access to the ReportParser class itself, as these are internal details
       that should not be visible or overridable by subclasses.
 
 protected abstract void fetchData(), protected abstract void processData(), protected abstract void generateReportContent():

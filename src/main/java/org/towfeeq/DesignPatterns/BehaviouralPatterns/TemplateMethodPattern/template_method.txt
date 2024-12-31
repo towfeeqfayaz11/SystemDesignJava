@@ -45,3 +45,7 @@ Limitations
           affect all subclasses.
     Tight Coupling:
         - Subclasses are tightly coupled to the superclass.
+
+NOTE: the template method pattern adheres to the open/closed priciple because the algorithm's structure
+      is defined in the base class, while subclasses can extend or modify specific steps without
+      changing the overall template
