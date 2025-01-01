@@ -1,0 +1,63 @@
+Chain of Responsibility Pattern:
+    The Chain of Responsibility (CoR) design pattern is a behavioral design pattern used to process a
+    request through a chain of handlers, where each handler decides either to handle the request or pass
+    it to the next handler in the chain.
+
+
+Key Concepts
+    - Handler: An interface or abstract class defining a method to process the request.
+    - ConcreteHandler: Implements the Handler interface and processes the request or passes it to the next handler.
+    - Client: Initiates the request and sends it to the first handler in the chain.
+
+
+Characteristics of CoR Pattern
+    Decoupling:
+        - The sender of a request doesn't need to know which handler will process it.
+    Dynamic Composition:
+        - Handlers can be composed and reordered dynamically at runtime.
+    Single Responsibility:
+        - Each handler focuses on processing a specific type of request.
+
+
+Real-Life Analogy
+    Imagine a support system where a customer service request is routed through:
+        - A Help Desk for basic queries.
+        - A Technical Team for technical issues.
+        - A Manager for escalated problems.
+    The request passes through the chain until it finds the right handler.
+
+Use Cases:
+    - Event handling in GUIs.
+    - Logging systems with different log levels.
+    - Request routing in web frameworks.
+    - Error-handling mechanisms.
+
+Benefits of CoR Pattern
+    Flexibility:
+        - Easily add or remove handlers from the chain.
+    Decoupling:
+        - The client does not need to know which handler will process the request.
+    Open/Closed Principle:
+        - New handlers can be added without modifying existing code.
+
+Limitations
+    Uncertainty:
+        - If no handler processes the request, it might go unhandled.
+    Performance:
+        - A long chain of handlers can result in slower processing.
+    Debugging:
+        - Can be harder to trace the flow of a request through the chain.
+
+When to Use:
+    - When multiple objects might handle a request, and the handler is not predefined.
+    - To avoid tightly coupling the sender and receiver of a request.
+    - When you want to add or remove handlers dynamically.
+
+
+
+
+
+
+
+
+
