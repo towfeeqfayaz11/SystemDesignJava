@@ -1,0 +1,59 @@
+The Mediator Design Pattern focuses on managing the communication between multiple objects through a
+central mediator object. This pattern promotes loose coupling by preventing objects from directly
+referring to each other and instead coordinating their behavior through the mediator.
+
+
+Key Concepts
+    - Mediator: A central object that encapsulates how a set of objects interact. It manages communication
+      and handles the logic of interaction.
+    - Colleagues: Individual objects that rely on the mediator for communication rather than interacting
+      directly with one another.
+
+Why Use the Mediator Pattern?
+    - Reduces dependencies between objects (colleagues), making them easier to maintain and extend.
+    - Centralizes communication logic in the mediator, simplifying individual colleague objects.
+    - Avoids complex interdependencies and keeps the system modular.
+
+Use Cases for Mediator Pattern
+    GUI Frameworks:
+        - A dialog box (mediator) coordinates interactions between UI components like buttons, text fields,
+          and checkboxes.
+        - Example: A login dialog box enabling the "Submit" button only when both username and password
+          fields are filled.
+    Air Traffic Control:
+        - Planes (colleagues) communicate with each other via a central air traffic controller (mediator),
+          avoiding direct communication.
+    Messaging Systems:
+        - Chat rooms serve as mediators between participants, broadcasting messages to all participants
+          except the sender.
+    Workflow Automation:
+        - Complex workflows often use mediators to coordinate tasks between systems or services.
+
+
+When to Use the Mediator Pattern
+    Complex Object Interaction:
+        - When objects interact in complex ways, and managing these interactions directly is cumbersome.
+    Dynamic Colleagues:
+        - When the set of interacting objects is dynamic or frequently changing.
+    Decoupling Requirement:
+        - When you need to reduce tight coupling between objects.
+
+Applications in Real Life
+    Air Traffic Control:
+        - Planes communicate with each other via an air traffic controller.
+    GUI Frameworks:
+        - Dialog boxes mediate communication between buttons, text fields, and other components.
+    Messaging Platforms:
+        - Chat rooms or notification systems that coordinate communication between users.
+
+
+NOTE: The observer pattern is concerned with one to many relationships, whle the mediator handles
+      many-to-many relationships
+
+
+
+
+
+
+
+
