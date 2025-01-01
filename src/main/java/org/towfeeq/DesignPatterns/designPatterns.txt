@@ -9,8 +9,10 @@ github reference: https://github.com/prateek27/design-patterns-java/tree/main (p
       among objects
     - they provide solutions for managing object relationships and communication protocols
       to promote loose coupling and enhance flexibility
-2) creational pattern
-3) structural pattern
+2) creational pattern:
+
+3) structural pattern:
+
 
 
 Code Comparison between factory pattern and abstract factory pattern

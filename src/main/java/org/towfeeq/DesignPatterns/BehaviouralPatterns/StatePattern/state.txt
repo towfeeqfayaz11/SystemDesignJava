@@ -1,0 +1,87 @@
+State Design Pattern
+    The State Design Pattern is a behavioral design pattern that allows an object to change
+    its behavior when its internal state changes. This is achieved by encapsulating the
+    state-specific behavior into separate classes and delegating state-related tasks
+    to the current state object.
+
+Key Concepts in the State Design Pattern
+    Context:
+        - holds a reference to the current state
+        - The primary object that maintains a reference to the current state and delegates
+          requests to it.
+        - Example: A Document object that changes behavior based on its state (Draft,
+          Moderation, Published).
+    State:
+        - interface for state-specific behavior
+        - An interface or abstract class that defines common behavior for all possible states.
+        - Example: State interface for document states.
+    Concrete States:
+        - specific implementations of the State interface that represent a particular state of the context object
+        - Specific implementations of the state interface representing each possible state
+          of the context.
+        - Example: DraftState, ModerationState, PublishedState.
+    Decoupling:
+        - The pattern ensures that the context does not implement state-specific logic itself.
+          It simply delegates tasks to the current state object.
+
+
+Key Features of the State Design Pattern
+    - Encapsulation of State-Specific Behavior: State logic is placed in separate classes
+      instead of being hardcoded in the context.
+
+    - Dynamic Behavior: The object can change its behavior dynamically by switching its state object.
+
+    - Open/Closed Principle: Adding new states is easier as it requires creating a new state
+      class without modifying the existing ones.
+
+
+Use Cases of the State Design Pattern
+    State Machines:
+        - When an object needs to behave differently based on its internal state (e.g., traffic lights, vending machines).
+        - Example: A TCP connection has states like Established, Listening, Closed.
+    Workflow Systems:
+        - Applications like document management or e-commerce order tracking where entities pass through various stages.
+        - Example: Order states (Pending, Processing, Shipped, Delivered).
+    Games:
+        - Character behavior changes dynamically based on the state (e.g., Idle, Running, Jumping).
+
+
+
+Benefits of the State Pattern
+    Encapsulation:
+        - State-specific behavior is encapsulated in separate classes.
+    Flexibility:
+        - Adding new states is simple and doesn't require modifying the existing code.
+    Improved Readability:
+        - The context class (Document) is cleaner and easier to maintain as it delegates tasks to state objects.
+    Loose Coupling:
+        - The context and state classes are decoupled, allowing changes to one without impacting the other.
+
+Limitations of the State Pattern:
+    - Increased Number of Classes: Each state requires its own class. For systems with a large number of states,
+      this can result in class explosion.
+    - Overhead in State Transitions: The pattern may involve frequent state transitions, which can lead to a
+      performance overhead
+    - Difficulty in State Sharing: States are often implemented as separate instances, which can lead to
+      redundancy when multiple objects share similar states.
+
+
+Analogy for Better Understanding
+    Imagine a video game character:
+        - Context: The character itself.
+        - States: The character can be in different states (Idle, Running, Jumping).
+        - State Behavior: Each state defines what happens when certain actions (like "jump" or "move") are performed.
+    For example:
+        - If the character is Idle and "jump" is triggered, it transitions to the Jumping state.
+        - If the character is Running and "stop" is triggered, it transitions to the Idle state.
+
+
+
+
+
+
+
+
+
+
+
