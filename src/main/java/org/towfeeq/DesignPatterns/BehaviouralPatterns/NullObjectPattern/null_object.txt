@@ -1,0 +1,47 @@
+Null Object Pattern
+    The Null Object Pattern is a behavioral design pattern that provides a default object to represent
+    a "do nothing" or "null" behavior instead of using null references. This pattern avoids null checks
+    and reduces the risk of NullPointerException in your application.
+
+Purpose
+    - To avoid null checks scattered throughout the code.
+    - To simplify the client code by providing a default, harmless implementation of an object that does nothing.
+    - To enhance code readability and maintainability.
+
+Key Components
+    - Abstract Base Class/Interface: Defines the common methods to be implemented by both real and null objects.
+    - Real Object: Implements the actual behavior of the class.
+    - Null Object: Provides a non-null, default implementation of the abstract class/interface that does nothing.
+    - Client Code: Interacts with objects without worrying about whether it's a real or null object.
+
+
+Advantages
+    - No Null Checks in Client Code: Null object acts as a default, removing the need for explicit null checks.
+    - Improved Readability: Simplifies code by avoiding null-related logic.
+    - Avoids NullPointerExceptions: Prevents accidental dereferencing of null objects.
+    - Polymorphic Behavior: Both real and null objects are treated uniformly, adhering to the
+      Liskov Substitution Principle (L in SOLID).
+
+Disadvantages
+    - Overhead: Adds extra classes for null objects and factories.
+    - Limited Use Cases: Best suited for scenarios where null logic is repetitive and predictable.
+    - Non-Standard Null Behavior: If the null object behavior becomes complex, it might be harder to understand.
+
+Use Cases
+    - User Interfaces: Returning a "guest" user or placeholder image instead of null.
+    - Collections: Providing an empty list or set as a default instead of returning null.
+    - Logging: Using a NullLogger implementation when logging is disabled.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
