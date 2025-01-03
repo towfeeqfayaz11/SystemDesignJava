@@ -1,0 +1,52 @@
+Adapter Design Pattern
+    - The Adapter Pattern is a structural design pattern that enables two incompatible interfaces to work together.
+      It acts as a bridge between the client (which expects a specific interface) and an existing class (which has
+      a different interface).
+
+    - Think of it like a power adapter: you have a laptop with a certain plug type and a wall outlet with a different
+      socket. The adapter makes them compatible.
+
+
+Key Features
+    - Purpose: To allow two incompatible interfaces to communicate.
+
+    Participants:
+     - Target Interface: The interface that the client expects to work with.
+     - Adaptee: The existing class with a different interface that needs adapting.
+     - Adapter: A class that implements the target interface and translates calls to the adaptee's methods.
+
+When to Use:
+    - When you have a class that cannot be modified, but you need it to work with an incompatible interface.
+    - When integrating a third-party library or legacy system into your application.
+
+
+Real-World Use Cases:
+    - Integrating Third-Party Libraries: Wrapping a library's interface to match the application's requirements.
+    - Legacy Code Migration: Using an adapter to make old code compatible with new codebases.
+    - Data Transformation: Adapting one data format or API to another.
+
+
+Benefits
+    - Promotes code reusability by allowing incompatible classes to work together.
+    - Follows the Open/Closed Principle: Existing code is not modified; new functionality is added via the adapter.
+    - Provides flexibility when dealing with third-party code or APIs.
+
+
+Limitations
+    - May introduce additional complexity.
+    - Overuse can lead to a system with too many layers of indirection, reducing maintainability.
+
+Key Steps in Implementation:
+    - Identify the existing class (Adaptee) and the required interface (Target Interface).
+    - Create an Adapter class that implements the Target Interface.
+    - Inside the Adapter, translate method calls from the Target Interface to the Adaptee’s methods.
+
+
+
+
+
+
+
+
+
+

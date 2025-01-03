@@ -12,6 +12,11 @@ github reference: https://github.com/prateek27/design-patterns-java/tree/main (p
 2) creational pattern:
 
 3) structural pattern:
+    - structural design patterns are design patterns that deal with how objects and classes
+      are composed to form larger structures, making the system more flexible and easy to
+      understand.
+    - They simplify the design of complex systems by creating `relationships` between objects
+    - They help in organizing class hierarchies and allow for easy modification and extension
 
 
 
