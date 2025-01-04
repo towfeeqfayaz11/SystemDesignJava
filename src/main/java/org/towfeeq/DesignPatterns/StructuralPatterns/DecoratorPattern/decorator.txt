@@ -1,0 +1,38 @@
+Decorator Pattern:
+    - Without decorator pattern assume you need to add functionality to an object at runtime, but subclassing would
+      lead to an explosion of subclasses or is impractical
+    - The Decorator Pattern is a structural design pattern used to add new behaviors or responsibilities to an
+      object dynamically without modifying its structure. It achieves this by wrapping an object within another
+      object, known as the decorator. The decorator implements the same interface as the original object,
+      delegating operations to it while optionally adding new behaviors.
+
+
+Key Points
+    Purpose: Dynamically enhance or modify the functionality of an object without altering its code.
+    Use Cases:
+        - Adding dynamic behavior to objects.
+        - Avoiding subclass explosion when multiple combinations of behaviors are needed.
+        - Enhancing existing functionalities like logging, caching, or validation.
+
+
+Components of the Decorator Pattern:
+    Component Interface:
+        - Defines the common interface for objects that can have additional responsibilities dynamically added to them.
+    Concrete Component:
+        - The base implementation of the component interface. This is the object that will be dynamically
+          wrapped with additional behavior.
+    Decorator Base Class:
+        - Implements the same interface as the component and contains a reference to a component object.
+    Concrete Decorators:
+        - Subclasses of the decorator base class that add or override functionality of the wrapped component.
+
+
+
+
+Benefits of the Decorator Pattern
+    Dynamic Behavior Addition: Add behavior at runtime without modifying existing code.
+    Composability: Combine multiple decorators to create complex functionality.
+    Open/Closed Principle: New features can be added without altering existing classes.
+Limitations
+    Complexity: Wrapping objects can add complexity to the code.
+    Performance: Multiple layers of wrapping can impact performance if overused.

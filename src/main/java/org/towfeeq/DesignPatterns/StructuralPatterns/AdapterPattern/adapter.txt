@@ -7,6 +7,8 @@ Adapter Design Pattern
       socket. The adapter makes them compatible.
 
 
+NOTE: the adapter class implements the target interface and holds a reference to the component class
+
 Key Features
     - Purpose: To allow two incompatible interfaces to communicate.
 
