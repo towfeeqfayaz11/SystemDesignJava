@@ -1,0 +1,54 @@
+Composite Pattern: A Detailed Explanation
+    - The Composite Pattern is a structural design pattern that allows you to compose objects into tree-like
+      structures to represent part-whole hierarchies. It enables you to treat individual objects and compositions
+      of objects uniformly.
+    - This pattern is usually used in scenarios where you have hierarchy
+
+
+Key Concepts of Composite Pattern
+    Component: The common interface that both leaf and composite objects implement. It can define operations
+               that can be applied to both individual objects and collections of objects.
+    Leaf:      Represents the individual objects in the hierarchy. These objects do not have children.
+    Composite: Represents the containers or collections of objects. A composite object may contain
+               both leaf objects and other composite objects.
+
+
+The core idea is to treat both individual objects and groups of objects (composites) in the same way,
+thereby allowing recursive composition of objects into complex structures.
+
+
+When to Use the Composite Pattern:
+    - Hierarchical Structures: When you have a tree-like structure where each node can be an individual
+                               object or a collection of objects.
+    - Example: File systems, GUI components, organization structures.
+    - Recursive Relationships: When you want to treat individual elements and compositions uniformly.
+    - Flexible and Extensible Systems: When you want to provide a consistent interface to manipulate both
+                                       simple and complex objects.
+
+Benefits of Composite Pattern
+    - Treating Objects Uniformly: The pattern allows for treating individual objects and compositions of objects
+      (like folders containing files) uniformly.
+    - Simplifies Client Code: The client does not need to know whether it’s dealing with a file or a folder;
+      both are treated the same.
+    - Flexibility and Extensibility: You can easily add new types of components (like symbolic links or
+      network resources) by implementing the same interface.
+
+Drawbacks of Composite Pattern:
+    - Increased Complexity for Simple Scenarios: For simple systems where only individual objects are needed,
+      the composite pattern may introduce unnecessary complexity.
+    - Overhead: The pattern can result in additional memory and computational overhead due to the need to manage
+      hierarchical structures.
+    - Difficulty in Operations: Some operations may become more complex or harder to implement, particularly
+      if the hierarchy involves deeply nested composites or mixed components.
+    - Inconsistent Design for Non-Uniform Components: If the components being treated uniformly do not share
+      a natural common behavior, it may cause awkwardness in the design.
+    - Unintended Flexibility: The pattern can sometimes encourage unnecessary generalization, leading to
+      the creation of more classes and relationships than necessary.
+
+
+Example:
+    Problem: when building systems like a file directory, which consist of both individual items (files) and
+    groups of items (directories), managing these with standard object hierarchies can become complex.
+
+    Solution: The Composite Pattern allows you to treat individual objects and compositions of objects uniformly by
+    representing part-whole hierarchies
