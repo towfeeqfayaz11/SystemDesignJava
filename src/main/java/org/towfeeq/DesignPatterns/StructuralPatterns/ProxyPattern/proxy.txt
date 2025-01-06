@@ -1,0 +1,69 @@
+Proxy Pattern: A Detailed Explanation
+    The Proxy Pattern is a structural design pattern that provides a placeholder or surrogate to control access
+    to another object. The proxy acts as an intermediary, controlling access, managing resources, or adding
+    functionality to the object it represents.
+
+
+Problem: Sometimes, direct access to an object might not be desirable due to reasons such as security,
+         resource optimization or controlled access
+Solution: The Proxy Pattern provides surrogate or placeholder for another object to control access to it
+
+Example:
+    Imagine a system where we want to load a heavy object like a large image from disk. It might take time
+    to load the image and we don't to loadit until it's necessary. WIthout using a proxy, the application
+    would load the image every time it's needed, even though if not displayed, wasting resources
+
+
+Key Concepts of Proxy Pattern
+    Proxy: The proxy object controls access to the real object.
+    Real Subject: The actual object that the proxy represents.
+    Client: The object that interacts with the proxy instead of directly accessing the real object.
+
+
+When to Use the Proxy Pattern:
+    Access Control: Control access to sensitive objects or expensive resources.
+    Example: Authentication proxies for securing access.
+    Lazy Initialization: Defer the creation of an expensive object until it is needed.
+    Example: Loading large images or documents.
+    Logging and Monitoring: Track interactions with the real object.
+    Example: Logging access to a database or API.
+    Remote Proxy: Manage communication with a remote object.
+    Example: Accessing remote services via an RMI (Remote Method Invocation).
+    Smart Reference: Add additional behavior when accessing an object.
+    Example: Counting references or locking resources.
+
+
+
+
+Benefits of Proxy Pattern:
+    - Provides control over access to an object (e.g., security, monitoring).
+    - Enables lazy initialization of expensive objects, improving performance.
+    - Acts as a placeholder to reduce resource consumption until the object is actually needed.
+    - Facilitates remote access to objects, enabling communication between different systems.
+    - Adds an additional layer to implement features like caching, logging, or access restrictions
+      without modifying the original object.
+
+Drawbacks of Proxy Pattern:
+    - Introduces complexity by adding additional layers between the client and the real object.
+    - Can introduce performance overhead due to added functionality in the proxy (e.g., in case
+      of remote proxies or lazy loading).
+    - May increase maintenance burden if proxies are not well-managed or overused.
+    - Might complicate debugging as the proxy pattern can obscure the real object’s behavior.
+    - Tightens coupling between the proxy and the real object, potentially reducing flexibility.
+
+Types of Proxy
+    Virtual Proxy: Manages access to expensive resources like files, images, or databases.
+    Example: Loading images or documents on demand.
+    Protection Proxy: Controls access to sensitive resources based on permissions.
+    Example: Authentication proxies.
+    Remote Proxy: Represents an object in a different address space (e.g., RMI).
+    Example: Accessing remote services or APIs.
+    Caching Proxy: Adds caching capabilities to avoid redundant operations.
+    Example: Caching API responses.
+    Logging Proxy: Logs access to the real object for monitoring or debugging.
+    Example: Tracking database access.
+
+
+
+
+
