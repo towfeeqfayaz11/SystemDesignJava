@@ -52,3 +52,11 @@ Example:
 
     Solution: The Composite Pattern allows you to treat individual objects and compositions of objects uniformly by
     representing part-whole hierarchies
+
+part-whole hierarchy:
+    - any object in a collection is a part of the whole composition and composition as a whole is a collection of parts.
+    - Basically, the term represents the construction of larger objects based on smaller ones. In the context of
+      Composite Pattern both large and small objects are instances of same class.
+
+
+NOTE: composite patterns allows to treat individual objects and groups of objects in the same way

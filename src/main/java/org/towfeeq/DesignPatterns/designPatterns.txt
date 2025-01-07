@@ -10,6 +10,13 @@ github reference: https://github.com/prateek27/design-patterns-java/tree/main (p
     - they provide solutions for managing object relationships and communication protocols
       to promote loose coupling and enhance flexibility
 2) creational pattern:
+    - deals with creation of objects in different ways for different scenerios
+    - purpose: focused on object creation mechanisms, aiming to optimize the creation process while ensuring flexibility
+    - goal: they abstract the instantiation process to make systems more flexible and reusable
+    - problems they solve: prevent tight coupling between code and object creation logic, simplifying
+      the management of new objects creation, especially in complex systems
+    - application: if you want to seperate the instantiayion process from usage.
+                   The exact type of object needed can vary depending on runtime conditions
 
 3) structural pattern:
     - structural design patterns are design patterns that deal with how objects and classes
