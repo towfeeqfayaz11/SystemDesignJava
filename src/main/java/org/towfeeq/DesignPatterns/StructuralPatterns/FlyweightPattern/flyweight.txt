@@ -1,0 +1,54 @@
+Flyweight Pattern
+    The Flyweight Pattern is a structural design pattern used to reduce memory usage by sharing as much data as
+    possible between similar objects. It focuses on separating intrinsic state (shared data) from extrinsic state
+    (unique data). This approach is particularly useful when dealing with a large number of similar objects,
+    such as in rendering or caching.
+
+
+Key Components of Flyweight Pattern
+    Flyweight:
+        - An interface or abstract class that defines methods for objects to accept extrinsic data and perform operations.
+        - Represents the shared (intrinsic) state of the object.
+    Concrete Flyweight:
+        - Implements the Flyweight interface.
+        - Contains intrinsic state that is shared and immutable.
+    Unshared Flyweight (Optional):
+        - A Flyweight object that is not shared but may still benefit from the Flyweight interface structure.
+        - Represents objects that do not share intrinsic state.
+    Flyweight Factory:
+        - Manages Flyweight objects.
+        - Ensures Flyweights are shared by creating and reusing them instead of instantiating new ones.
+    Client:
+        - Combines intrinsic state (from Flyweight objects) and extrinsic state (specific to the instance)
+          to perform operations.
+
+
+Key Concepts
+    Intrinsic State:
+        - Shared and immutable data stored in Flyweight objects.
+        - Example: The type, color, or texture of an object.
+    Extrinsic State:
+        - Unique and variable data that is passed by the client.
+        - Example: The position or size of an object.
+
+
+When to Use Flyweight Pattern:
+    - Your application has a large number of similar objects, and creating separate objects would consume
+      too much memory.
+    - You can divide the state of the objects into intrinsic (shared) and extrinsic (unique) parts.
+    - The shared state is immutable (does not change during the object's lifetime).
+
+
+Benefits of Flyweight Pattern
+    Memory Efficiency:
+        - Reduces memory usage by sharing intrinsic state.
+    Performance Boost:
+        - Fewer objects lead to faster operations.
+    Reusability:
+        - Common states are encapsulated and reused across instances.
+
+Drawbacks of Flyweight Pattern
+    Complexity:
+        - Additional logic for managing intrinsic and extrinsic states.
+    Harder Debugging:
+        - Shared objects might complicate debugging as they are reused in multiple contexts.
