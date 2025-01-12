@@ -1,0 +1,2 @@
+There are total five solid principles:
+1) Single Responsibility Principle
