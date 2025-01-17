@@ -1,0 +1,22 @@
+# Interface vs Abstract class
+    - Abstract class deals with structure of class
+    - Interface deals with behavior of the class
+    - Abstract class defines what a class is
+    - Interface defines what a class does
+
+
+
+# basic elements for a UML diagram:
+    - class: A blueprint for objects, defined with a name, attributes, and methods.
+    - Interface: A contract that defines methods that a class must implement.
+    - Object: An instance of a class at runtime.
+    - Association: A relationship between two classes that represents interactions between objects.
+    - Inheritance: Represents an "is-a" relationship, where a subclass inherits from a superclass.
+    - Composition: A stronger association where one object is part of another and cannot exist independently.
+    - Aggregation: A weaker form of association where one object contains another, but they can exist independently.
+
+
+# encapsulation vs abstraction
+    - Encapsulation focuses on hiding data, while abstraction focuses on hiding implementation details
+    - Encapsulation focuses on restricting access to data and methods, while abstraction hides the
+      complexity of implementation from the user. Both work together to simplify interaction with objects.

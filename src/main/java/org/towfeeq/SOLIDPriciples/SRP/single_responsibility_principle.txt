@@ -1,0 +1,9 @@
+# Single Responsibility Principle:
+    A class, function, or module should have only one responsibility or reason to change. This means that
+    it should only do one thing, whether it’s a class managing a single piece of business logic or a
+    function performing a specific task.
+
+#  Why it matters:
+    By ensuring that both classes and functions have a single responsibility, your code becomes more modular,
+    easier to understand, test, and maintain. When something changes in the business requirements, you’ll
+    know exactly where to make modifications.
