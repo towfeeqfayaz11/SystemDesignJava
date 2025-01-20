@@ -1,0 +1,16 @@
+# Open/Closed Principle:
+   Software entities like classes, functions, and modules should be open for extension but closed for
+   modification. This means that you should be able to add new functionality without altering existing code.
+
+# Why it matters:
+    This principle encourages the use of abstractions and design patterns (like inheritance, composition,
+    or higher-order functions) to extend behavior. By keeping existing code unchanged, you reduce the
+    risk of introducing bugs and make your software more adaptable to new requirements.
+
+
+
+
+
+
+
+
