@@ -1,0 +1,12 @@
+Definition:
+    - Subtypes (including subclasses and functions) should be substitutable for their base types or
+      original functions without altering the correctness of the program. This ensures that derived
+      classes or functions behave as expected when used in place of the base class or function.
+    - LSP states that objects of a super class should be replaceable with objects of a subclass
+      without altering the correctness of the program. It ensures that a subclass can stand in
+      for its parent class and function correctly in any context that expects the parent class
+    -  No client should be forced to depend on methods it doen't use. Split large interface into smaller,
+       more specific ones
+
+Why it matters:
+    This principle ensures that components in your system can be replaced or extended without causing unexpected behavior, making your code more reliable and easier to manage.
