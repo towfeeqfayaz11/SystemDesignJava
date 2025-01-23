@@ -1,0 +1,9 @@
+Definition:
+    - High-level modules or functions should not depend on low-level modules or functions.
+      Both should depend on abstractions (e.g., interfaces or abstract classes). Additionally, abstractions
+      should not depend on details; details should depend on abstractions.
+
+Why it matters:
+    This principle encourages the use of interfaces or abstract functions to decouple high-level logic
+    from low-level implementations. It helps in creating flexible, testable, and maintainable code
+    by allowing the high-level logic to remain unchanged even when the underlying implementation changes.
