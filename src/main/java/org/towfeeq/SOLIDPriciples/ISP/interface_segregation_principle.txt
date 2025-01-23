@@ -1,0 +1,11 @@
+Definition:
+    - Clients (including classes and functions) should not be forced to depend on methods or functions they
+      do not use/need. Instead of having large, general-purpose interfaces or functions, break them down into
+      smaller, more specific ones.
+    - ISP ensures that classes are not burdened with methods they don't need. It promotes better design by breaking
+      large, general-purpose interfaces into smaller, more specific ones.
+    - It improves maintainability, flexibility, and tetability by ensuring that classes only have the dependencies they
+      they actually require
+Why it matters:
+    This principle helps to keep your interfaces and functions focused and relevant to the needs of their clients.
+    It reduces unnecessary dependencies, making your code more modular and easier to refactor.
