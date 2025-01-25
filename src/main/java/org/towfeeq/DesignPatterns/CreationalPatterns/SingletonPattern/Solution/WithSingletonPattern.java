@@ -1,7 +1,5 @@
 package org.towfeeq.DesignPatterns.CreationalPatterns.SingletonPattern.Solution;
 
-import org.towfeeq.DesignPatterns.CreationalPatterns.SingletonPattern.Solution.DatabaseConnectionManager;
-
 public class WithSingletonPattern {
     public static void main(String[] args) {
         DatabaseConnectionManager dbManager1 = DatabaseConnectionManager.getInstance();

@@ -8,7 +8,7 @@ public class WithoutSingletonPattern {
 
         DatabaseConnectionManager dbManager2 = new DatabaseConnectionManager();
 
-        if(dbManager1 == dbManager2) {
+        if(dbManager1 == dbManager2) { // not same, multiple instances created
             System.out.println("Both instances are same");
         }else{
             System.out.println("Both instances are different");
