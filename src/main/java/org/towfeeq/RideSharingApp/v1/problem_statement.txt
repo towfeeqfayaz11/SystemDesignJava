@@ -77,5 +77,3 @@ Problem Statement - Design a Ride-Sharing Application
             The system should be extensible. New vehicle types (e.g., electric scooters, vans)
             and new fare strategies (e.g., peak-hour pricing) should be easily added without
             modifying the core ride-matching logic.
-
-
